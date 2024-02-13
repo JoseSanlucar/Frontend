@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+:root {
+  --primaty-1: #495E57;
+  --primary-2:#F4CE14;
+  --secundary-1:#EE9972;
+  --secundary-2:#FBDABB;
+  --secundary-3:#EDEFEE;
+  --secundary-3:#333333;
+  --font-size-large: 24px;
+  --spacing-medium: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Una sola columna */
+  grid-auto-rows: auto; /* Altura automática para las filas */
+  grid-gap: 20px; /* Espacio entre las celdas de la cuadrícula */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Nav.css */
+
+.nav-principal {
+  display: grid; /* Establece el contenedor como un flex container */
+  grid-auto-flow: column;
+   /* Centra verticalmente los elementos */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.links {
+  display: grid; /* Establece el contenedor como un flex container */
+  grid-auto-flow: column;
+  align-items: center; /* Centra verticalmente los elementos */
+}
+.hero{
+  background-color:var(--primaty-1);;
+
+}
+.logo {
+  justify-self: end;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Opcional: Agrega estilos para los elementos img y ul */
+.nav-principal img {
+  margin-right: 10px; /* Ajusta el espacio entre la imagen y la lista */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-principal ul {
+  list-style: none; /* Elimina los estilos de lista predeterminados */
+  padding: 0; /* Elimina el relleno predeterminado de la lista */
+  margin: 0; /* Elimina el margen predeterminado de la lista */
+}
+
+.nav-principal ul li {
+  margin-right: 10px; /* Ajusta el espacio entre los elementos de la lista */
+}
+
+a {
+  color: black; /* Establece el color del texto a negro */
+  text-decoration: none; /* Elimina el subrayado del enlace */
 }

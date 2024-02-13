@@ -1,21 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Header from './Header';
+import Hero from './Hero';
 import Nav from './Nav';
-import Main from './Main';
+import Highlights from './Highlights';
+import Testimonials from './Testimonials';
+import About from './About';
 import Footer from './Footer';
+;
 
 
 function App() {
-  return (
-    <>
-      <Header/>
-      <Nav/>
-      <Main/>
-      <Footer/>
-    </>
-  );
+    return (
+    <div className='grid-container'>
+        <Nav/>
+        <Hero/>
+        <Highlights/>
+        <Testimonials/>
+        <About/>
+        <Footer/>
+    </div>
+);
 }
 
 export default App;
