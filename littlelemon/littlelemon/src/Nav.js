@@ -1,18 +1,18 @@
 // Nav.js
 import React from 'react';
 import './App.css';
+import { Link } from "react-router-dom";
 
 function Nav() {
     return (
         <nav className='nav-principal'>
-            <img src="icons_assets/Logo.SVG" alt="little lemon logo" className='logo'></img>
+            <img src="./img/Logo.SVG" alt="little lemon logo" className='logo'></img>
             <ul className='links'>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#reservations">Reservations</a></li>
-                <li><a href="#order">Order Online</a></li>
-                <li><a href="#login">Login</a></li>
+                <li><Link to="/" >Home</Link></li>
+                <li><Link to="/about" >About</Link></li>
+                <li><Link to="/menu" >Menu</Link></li>
+                <li><Link to="/reservation" >Reservations</Link></li>
+                <li><Link to="/highlights" >Highlights</Link></li>
             </ul>
             <span></span>
         </nav>

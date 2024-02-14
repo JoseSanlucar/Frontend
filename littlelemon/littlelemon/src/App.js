@@ -6,17 +6,20 @@ import Highlights from './Highlights';
 import Testimonials from './Testimonials';
 import About from './About';
 import Footer from './Footer';
-;
+import {Routes, Route} from "react-router-dom";
 
 
 function App() {
     return (
     <div className='grid-container'>
         <Nav/>
-        <Hero/>
-        <Highlights/>
+        <Routes>
+            <Route path="/" element={<Hero/>}></Route>
+            <Route path="/highlights" element={<Highlights/>}></Route>
+            <Route path="/about" element={<About/>}></Route>
+            <Route path="/hero" element={<Hero/>}></Route>
+        </Routes>
         <Testimonials/>
-        <About/>
         <Footer/>
     </div>
 );

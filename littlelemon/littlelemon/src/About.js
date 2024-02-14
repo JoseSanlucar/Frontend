@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
     return (
         <about>
-            {/* Content of the footer */}
+            <h1>About</h1>
         </about>
     );
 }

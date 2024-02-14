@@ -4,7 +4,7 @@
   --secundary-1:#EE9972;
   --secundary-2:#FBDABB;
   --secundary-3:#EDEFEE;
-  --secundary-3:#333333;
+  --secundary-4:#333333;
   --font-size-large: 24px;
   --spacing-medium: 10px;
 }
@@ -29,10 +29,6 @@
   grid-auto-flow: column;
   align-items: center; /* Centra verticalmente los elementos */
 }
-.hero{
-  background-color:var(--primaty-1);;
-
-}
 .logo {
   justify-self: end;
   padding: 10px;
@@ -54,6 +50,17 @@
 }
 
 a {
-  color: black; /* Establece el color del texto a negro */
+  color: var(--secundary-4); /* Establece el color del texto a negro */
   text-decoration: none; /* Elimina el subrayado del enlace */
+  font-weight: bolder;
+}
+
+.card-title{
+  font-size: 18pt;
+  font-weight: bolder;
+  color: var(--secundary-4);
+}
+.card-paragraph{
+  font-size: 16pt;
+  color:var(--primaty-1)
 }
