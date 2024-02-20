@@ -44,8 +44,7 @@ button{
 }
 .imagen-saliente {
     position: absolute; /* Posiciona la imagen absolutamente dentro del contenedor */
-    bottom: -20px; /* Ajusta la posición vertical para que la imagen sobresalga del borde inferior del contenedor */
-    left: 50%; /* Ajusta la posición horizontal para centrar la imagen */
+    bottom: -40px; /* Ajusta la posición vertical para que la imagen sobresalga del borde inferior del contenedor */
+    left: 60%; /* Ajusta la posición horizontal para centrar la imagen */
     transform: translateX(-50%); /* Centra horizontalmente la imagen */
-    z-index: -1; /* Coloca la imagen detrás del contenido del contenedor */
 }

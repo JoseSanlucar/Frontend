@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hero.css';
 
+
 function Hero() {
     return (
         <section className='contenedor'>
@@ -12,7 +13,7 @@ function Hero() {
             <button>Reserve a Table</button>
             </div>
             <span></span>
-            <img src="./img/restauranfood.jpg" alt="imagen chef" className='imagen-saliente'></img>
+            <img height={250} src={require("./img/restauranfood.jpg")} alt="imagen chef" className='imagen-saliente'></img>
             <span></span>
         </section>
     );

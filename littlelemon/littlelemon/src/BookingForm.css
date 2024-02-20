@@ -1,0 +1,62 @@
+:root {
+    --primaty-1: #495E57;
+    --primary-2:#F4CE14;
+    --secundary-1:#EE9972;
+    --secundary-2:#FBDABB;
+    --secundary-3:#EDEFEE;
+    --secundary-4:#333333;
+    --font-size-large: 24px;
+    --spacing-medium: 10px;
+  }
+
+button{
+    background-color: var(--primary-2);
+    color: var(--secundary-4);
+    font-weight: bolder;
+    border: none; /* Elimina el borde por defecto */
+    border-radius: 10px; /* Establece el radio de borde para que sea redondeado */
+    padding: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
+fieldset{
+    display: grid;
+    justify-content: center;
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    color: var(--secundary-4)
+  }
+  
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="date"],
+  input[type="time"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Para incluir el padding en el ancho total */
+  }
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+.contenedor{
+    background-color: var(--primaty-1);
+}
