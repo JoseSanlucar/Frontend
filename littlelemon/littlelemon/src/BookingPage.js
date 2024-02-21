@@ -60,9 +60,9 @@ function BookingPage() {
     };
 
     return (
-        <>
+        <div className='contenedor2'>
             <BookingForm availableTimes={availableTimes} updateTimes={dispatch} onDateChange={handleDateChange} onSubmit={handleFormSubmit}/>
-        </>
+        </div>
     );
 }
 

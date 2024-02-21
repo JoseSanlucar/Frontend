@@ -59,6 +59,7 @@ button:disabled {
   }
 .contenedor{
     background-color: var(--primaty-1);
+    height: 300px;
 }
 
 .contenedor2 {
