@@ -1,0 +1,68 @@
+:root {
+  --primaty-1: #495E57;
+  --primary-2:#F4CE14;
+  --secundary-1:#EE9972;
+  --secundary-2:#FBDABB;
+  --secundary-3:#EDEFEE;
+  --secundary-4:#333333;
+  --font-size-large: 24px;
+  --spacing-medium: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Una sola columna */
+  grid-auto-rows: auto; /* Altura automática para las filas */
+  grid-gap: 20px; /* Espacio entre las celdas de la cuadrícula */
+}
+
+/* Nav.css */
+
+.nav-principal {
+  display: grid; /* Establece el contenedor como un flex container */
+  grid-auto-flow: column;
+   /* Centra verticalmente los elementos */
+}
+
+.links {
+  display: grid; /* Establece el contenedor como un flex container */
+  grid-auto-flow: column;
+  align-items: center; /* Centra verticalmente los elementos */
+  margin-left: 20px;
+}
+.logo {
+  justify-self: end;
+  padding: 10px;
+  margin-right: 30px;
+}
+
+/* Opcional: Agrega estilos para los elementos img y ul */
+.nav-principal img {
+  margin-right: 10px; /* Ajusta el espacio entre la imagen y la lista */
+}
+
+.nav-principal ul {
+  list-style: none; /* Elimina los estilos de lista predeterminados */
+  padding: 0; /* Elimina el relleno predeterminado de la lista */
+  margin: 0; /* Elimina el margen predeterminado de la lista */
+}
+
+.nav-principal ul li {
+  margin-right: 10px; /* Ajusta el espacio entre los elementos de la lista */
+}
+
+a {
+  color: var(--secundary-4); /* Establece el color del texto a negro */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  font-weight: bolder;
+}
+
+.card-title{
+  font-size: 18pt;
+  font-weight: bolder;
+  color: var(--secundary-4);
+}
+.card-paragraph{
+  font-size: 16pt;
+  color:var(--primaty-1)
+}
