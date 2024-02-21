@@ -20,7 +20,7 @@ function submitForm (formData,navigate){
     });
 }
 
-export function initializeTimes() {
+function initializeTimes() {
     const today = new Date();
     const year = today.getFullYear();
     const month = today.getMonth() + 1; // Months are zero-based
@@ -67,6 +67,6 @@ function BookingPage() {
 }
 
 export default BookingPage;
-export { updateTimes };
+export { updateTimes,initializeTimes };
 
 

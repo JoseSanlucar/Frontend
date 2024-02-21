@@ -60,3 +60,16 @@ button:disabled {
 .contenedor{
     background-color: var(--primaty-1);
 }
+
+.contenedor2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: var(--primaty-1);
+}
+
+
+.contenedor2 h1 {
+  font-size: var(--font-size-large);
+}

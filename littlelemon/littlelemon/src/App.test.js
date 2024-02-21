@@ -1,6 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import BookingForm from './BookingForm';
 import { initializeTimes, updateTimes } from './BookingPage'; // Importa las funciones necesarias
+import { getIsFormValid } from './BookingForm'; // Import your validation functions
+
+
 
 describe('BookingForm component', () => {
     test('renders Date label correctly', () => {
@@ -32,3 +35,58 @@ describe('updateTimes function', () => {
         expect(updateTimes('UPDATE_TIMES',selectedDate)).toEqual(updatedTimes);
     });
 });
+
+describe('BookingForm', () => {
+    test('date input has required attribute', () => {
+        const { getByLabelText } = render(<BookingForm />);
+        const dateInput = getByLabelText('Date:');
+        expect(dateInput).toHaveAttribute('required');
+    });
+
+    test('number of guests input has required and min attributes', () => {
+        const { getByLabelText } = render(<BookingForm />);
+        const numberOfGuestsInput = getByLabelText('Number of Guests:');
+        expect(numberOfGuestsInput).toHaveAttribute('required');
+        expect(numberOfGuestsInput).toHaveAttribute('min', '1');
+    });
+
+});
+describe('Form Validation', () => {
+    test('validateDate - valid date', () => {
+        const validDate = '2024-02-20';
+        expect(validDate).toBe(true);
+    });
+
+    test('validateDate - invalid date', () => {
+        const invalidDate = '2024-02-31'; // Assuming February 31st is invalid
+        expect(invalidDate).toBe(false);
+    });
+
+    test('validateNumberOfGuests - valid number', () => {
+        const validNumberOfGuests = '2';
+        expect(validNumberOfGuests>0).toBe(true);
+    });
+
+    test('validateNumberOfGuests - invalid number', () => {
+        const invalidNumberOfGuests = '0';
+        expect(invalidNumberOfGuests>0).toBe(false);
+    });
+  
+    test('getIsFormValid - valid form', () => {
+        const formData = {
+            date: '2024-02-20',
+            numberOfGuests: '2',
+        // Add other required fields as needed
+      };
+      expect(getIsFormValid(formData)).toBe(true);
+    });
+  
+    test('getIsFormValid - invalid form', () => {
+        const formData = {
+            date: '2024-02-31',
+            numberOfGuests: '0',
+        // Add other required fields as needed
+        };
+        expect(getIsFormValid(formData)).toBe(false);
+    });
+  });

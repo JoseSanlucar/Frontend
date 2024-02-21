@@ -9,7 +9,7 @@ function BookingForm({ availableTimes, setAvailableTimes,onDateChange,onSubmit }
     const [occasion,setOccasion]=useState("");
 
     const getIsFormValid = () => {
-        return (date && time && numberOfGuests>0 && occasion);
+        return (date && time && numberOfGuests>1 && occasion);
     };
 
     const clearForm = () => {
@@ -42,12 +42,12 @@ function BookingForm({ availableTimes, setAvailableTimes,onDateChange,onSubmit }
         <form onSubmit={handleSubmit}>
             <fieldset>
                 <>
-                    <label>Date:</label>
-                    <input type="date" name="date" value={date} onChange={handleDateChange} />
+                    <label htmlFor="date">Date:</label>
+                    <input type="date" id="date" name="date" value={date} onChange={handleDateChange} required />
                 </>
                 <>
-                    <label>Time:</label>
-                    <select name="time" value={time} onChange={(e) => { setTime(e.target.value); }}>
+                    <label htmlFor="time">Time:</label>
+                    <select name="time" id="time" value={time} onChange={(e) => { setTime(e.target.value); }} >
                         <option value="">Select Time</option>
                         {availableTimes.map((time, index) => (
                             <option key={index} value={time}>{time}</option>
@@ -55,22 +55,23 @@ function BookingForm({ availableTimes, setAvailableTimes,onDateChange,onSubmit }
                     </select>
                 </>
                 <>
-                    <label>Number of Guests:</label>
-                    <input type="number" name="numberOfGuests" value={numberOfGuests} onChange={(e) => { setNumberOfGuests(e.target.value); }} />
+                    <label htmlFor="number">Number of Guests:</label>
+                    <input type="number" id="numberOfGuests" name="numberOfGuests" value={numberOfGuests} onChange={(e) => { setNumberOfGuests(e.target.value); }} min="1"/>
                 </>
                 <>
-                    <label>Occasion:</label>
-                    <select name="occasion" value={occasion} onChange={(e) => { setOccasion(e.target.value); }} >
+                    <label htmlFor="occasion">Occasion:</label>
+                    <select name="occasion" id="occasion" value={occasion} onChange={(e) => { setOccasion(e.target.value); }} required >
                         <option value="">Select Occasion</option>
                         <option value="Birthday">Birthday</option>
                         <option value="Anniversary">Anniversary</option>
                     </select>
                 </>
                 <>
-                    <button type="submit" disabled={!getIsFormValid()}>Make your Reservation</button>
+                    <button type="submit" aria-label="Make your Reservation" disabled={!getIsFormValid()}>Make your Reservation</button>
                 </>
             </fieldset>
         </form>
     );
 }
 export default BookingForm;
+
